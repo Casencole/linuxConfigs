@@ -23,9 +23,9 @@ set $wm_setting_app_compositor       picom
 
 #81A1C1
 #3B4252
-set $wm_color_border_active_bg       #EAD569
+set $wm_color_border_active_bg       #c58af9
 set $wm_color_border_active_fg       #3B4252
-set $wm_color_border_inactive_bg     #BB593F
+set $wm_color_border_inactive_bg     #3B4252
 set $wm_color_border_inactive_fg     #D8DEE9
 set $wm_color_background             #2E3440
 
@@ -36,16 +36,18 @@ set $bar_setting_separator           " / "
 set $bar_setting_statusCommand       i3status
 set $bar_setting_trayoutput          full
 
-set $bar_color_background            #0D1E29 
+#0D1E29 Dark Blue that was trying to match wallpaper
+#FFFFFF I don't know what these change and don't see a diffrence
+set $bar_color_background            #112F45    
 set $bar_color_foreground            #FFFFFF
 set $bar_color_statusline            #FFFFFF
 set $bar_color_separator             #FFFFFF
 
-set $bar_color_workspace_focused_bg  #EAD569
+set $bar_color_workspace_focused_bg  #A3BE8C
 set $bar_color_workspace_focused_fg  #2E3440
 set $bar_color_workspace_active_bg   #EBCB8B
 set $bar_color_workspace_active_fg   #2E3440
-set $bar_color_workspace_inactive_bg #BB593F
+set $bar_color_workspace_inactive_bg #BF616A
 set $bar_color_workspace_inactive_fg #2E3440
 set $bar_color_workspace_urgent_bg   #D08770
 set $bar_color_workspace_urgent_fg   #2E3440
