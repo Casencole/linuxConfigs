@@ -1,0 +1,63 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+# Font Size is located in the .config/i3/config file which will adjust the i3status
+# bar size :accordingly 
+general {
+        colors = true
+        interval = 5
+}
+
+order += "volume master"
+order += "wireless _first_"
+order += "battery all"
+order += "disk /"
+order += "cpu_temperature 0"
+#order += "memory"
+order += "tztime local"
+
+
+volume master {
+      format = "🔊:%volume"
+      format_muted = "🔈: Muted (%volume)"
+}
+
+wireless _first_ {
+        format_up = "(%quality at %essid ) %ip"
+        format_down = "W: down"
+}
+
+battery all {
+       format = "%status %percentage"
+        format_down = "No battery"
+        status_chr = "CHR"
+        status_bat = "BAT"
+        status_unk = "UNK"
+        status_full = "FULL"
+        threshold_type = "percentage"
+        low_threshold = "25"
+
+}
+
+disk / {
+        format = "%free"
+}
+cpu_temperature 0 {
+         format = "%degrees ℃ "
+         max_threshold = 50
+}
+
+
+memory {
+        format = "MEM: %used | %available"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+tztime local {
+        format = "%-I:%M:%S - %Y-%m-%d"
+}

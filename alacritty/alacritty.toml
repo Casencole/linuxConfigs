@@ -1,0 +1,20 @@
+live_config_reload = true
+
+#window
+window.opacity = 0.95
+window.decorations = "Full" # "Full" or "None" for the window border
+font.normal.family="InconsolataGoNerdFontMono"
+font.size =12
+
+# Colors (Doom One)
+colors.primary.background = '0x1a1c22'#'0x282c34'
+colors.primary.foreground = '0xbbc2cf'
+
+colors.normal.black =   '0x282c34'
+colors.normal.red =     '0xff6c6b'
+colors.normal.green =   '0x98be65'
+colors.normal.yellow =  '0xecbe7b'
+colors.normal.blue =    '0x51afef'
+colors.normal.magenta = '0xc678dd'
+colors.normal.cyan =    '0x46d9ff'
+colors.normal.white =   '0xbbc2cf'
