@@ -37,11 +37,10 @@ set $bar_setting_statusCommand       i3status
 set $bar_setting_trayoutput          full
 
 #0D1E29 Dark Blue that was trying to match wallpaper
-#FFFFFF I don't know what these change and don't see a diffrence
-set $bar_color_background            #112F45    
+set $bar_color_background            #3B425280
 set $bar_color_foreground            #FFFFFF
-set $bar_color_statusline            #FFFFFF
-set $bar_color_separator             #FFFFFF
+set $bar_color_statusline            #c58af9
+set $bar_color_separator             #FFFFFF99
 
 set $bar_color_workspace_focused_bg  #A3BE8C
 set $bar_color_workspace_focused_fg  #2E3440
@@ -174,6 +173,7 @@ bar {
 	separator_symbol $bar_setting_separator
 	status_command   $bar_setting_statusCommand
 	tray_output      $bar_setting_trayoutput
+   i3bar_command i3bar --transparency
 
 	colors {
 		background   $bar_color_background
