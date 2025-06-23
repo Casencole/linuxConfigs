@@ -14,7 +14,24 @@ M.base46 = {
 	},
 }
 
-M.nvdash = { load_on_startup = true }
+M.nvdash = { 
+  load_on_startup = true 
+  -- header = {
+  --         "           ▄ ▄                   ",
+  --         "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
+  --         "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
+  --         "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
+  --         "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
+  --         "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
+  --         "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
+  --         "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
+  --         "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
+  --       },
+  -- buttons = {
+  --
+  -- },
+}
+
 M.ui = {
 
   statusline = {
@@ -24,11 +41,21 @@ M.ui = {
     order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" ,"f" },
     -- order = { "mode", "f", "git", "%=", "lsp_msg", "%=", "lsp", "cwd", "xyz" },
     modules = {
-      f = "%c",
+      f = "%c", -- Column Number 
       xyz = "bob",
     },
 
   },
+}
+
+M.colorify = {
+  enabled = true,
+
+  -- fg & bg highlight the text 
+  -- virtual creates the virt_text
+  mode = "virtual", -- "fg" | "bg" | "virtual"
+  virt_text = " ", -- "Bob the Ghost"
+  highlight = { hex = true, lspvars = true },
 }
 
 
