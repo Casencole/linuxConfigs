@@ -7,33 +7,34 @@ local M = {}
 
 M.base46 = {
 	theme = "onedark",
-  transparency = true, 
+  transparency = true,
 	hl_override = {
 		-- Comment = { italic = true },
 		-- ["@comment"] ={ italic = true },
 	},
 }
 
-M.nvdash = { 
-  load_on_startup = true 
-  -- header = {
-  --         "           ▄ ▄                   ",
-  --         "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
-  --         "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
-  --         "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
-  --         "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
-  --         "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
-  --         "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
-  --         "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
-  --         "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
-  --       },
-  -- buttons = {
-  --
-  -- },
+M.nvdash = {
+    load_on_startup = true,
+    header = {
+      "                            ",
+      "     ▄▄         ▄ ▄▄▄▄▄▄▄   ",
+      "   ▄▀███▄     ▄██ █████▀    ",
+      "   ██▄▀███▄   ███           ",
+      "   ███  ▀███▄ ███           ",
+      "   ███    ▀██ ███           ",
+      "   ███      ▀ ███           ",
+      "   ▀██ █████▄▀█▀▄█hi███▄    ",
+      "     ▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀   ",
+      "                            ",
+      "     Powered By  eovim    ",
+      "                            ",
+    },
+  -- buttons = {}
 }
 
 M.ui = {
-
+  -- at some point I must of adjusted the ruler setting for cursor and need to fix it 
   statusline = {
 
     theme = "default",            -- "default" | "vscode"| "minimal" | "vscode_colored"
@@ -46,6 +47,16 @@ M.ui = {
     },
 
   },
+
+  tabufline = {
+     -- order = { "treeOffset", "buffers", "tabs", "abc" },
+    order = {}, -- Tabs still exist just not shown
+    modules = {
+      abc = function()
+        return "hi"
+      end,
+    }
+  }
 }
 
 M.colorify = {
@@ -58,5 +69,8 @@ M.colorify = {
   highlight = { hex = true, lspvars = true },
 }
 
+M.lsp = {
+  signature = true,
+}
 
 return M

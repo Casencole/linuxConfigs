@@ -38,7 +38,7 @@ end)
 
 -- Vim Settings
 vim.opt.relativenumber = true
-vim.opt.spell = true
+-- vim.opt.spell = true
 vim.opt.spelllang = "en"
 
 -- So if I have a lsp for a given language this line highlight errors red
@@ -48,4 +48,4 @@ vim.cmd.highlight({ "link", "Warning", "Error" })
 -- Spell Check highlight
 -- vim.api.nvim_command("hi clear SpellBad")
 -- vim.api.nvim_command("hi SpellBad cterm=underline")
--- vim.api.nvim_command("hi SpellBad gui=undercurl")
+-- vim.api.nvim_command("hi SpellBad gui=undercurl"

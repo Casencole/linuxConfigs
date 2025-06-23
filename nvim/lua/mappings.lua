@@ -5,6 +5,7 @@ require "nvchad.mappings"
 vim.g.mapleader = " "
 
 local map = vim.keymap.set
+-- local rm  = vim.keycode.del
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "kj", "<ESC>")
@@ -17,3 +18,6 @@ map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "fuzzy fi
 
  -- ctrl s = save in any mode, result ends in normal mode
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr><ESC>")
+
+-- toggle spell check 
+map("n", "<leader>sc", ":set spell!<CR>")
