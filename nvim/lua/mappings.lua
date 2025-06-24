@@ -21,3 +21,8 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr><ESC>")
 
 -- toggle spell check 
 map("n", "<leader>sc", ":set spell!<CR>")
+
+-- close tab instead of all of nvim (used to close out of all unsaved taps)
+map("n", "<C-q>", "<leader>x")
+
+

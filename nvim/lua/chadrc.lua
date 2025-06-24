@@ -1,17 +1,29 @@
 -- This file needs to have same structure as nvconfig.lua 
 -- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
--- Please read that file to know all available options :( 
+-- Please read that file to know all available options :( - 
 
 ---@type ChadrcConfig
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "doomchad",
   transparency = true,
 	hl_override = {
 		-- Comment = { italic = true },
 		-- ["@comment"] ={ italic = true },
 	},
+  changed_themes = {
+    doomchad = {
+      base_16 = { 
+        base00 = "#282c34"
+      },
+      base_30 = {
+        -- red = "#mycol",
+        -- one_bg = #FFFFFFFF,
+        -- black = "#FFFFFF",
+      },
+    },
+  },
 }
 
 M.nvdash = {
@@ -39,18 +51,19 @@ M.ui = {
 
     theme = "default",            -- "default" | "vscode"| "minimal" | "vscode_colored"
     separator_style = "default",  -- "default" | "round" | "block" | "arrow"
-    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" ,"f" },
+    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" },
     -- order = { "mode", "f", "git", "%=", "lsp_msg", "%=", "lsp", "cwd", "xyz" },
     modules = {
-      f = "%c", -- Column Number 
+      c = "%c", -- Column Number
+      p = "%p%%, %c", -- percent through file
       xyz = "bob",
     },
 
   },
 
   tabufline = {
-     -- order = { "treeOffset", "buffers", "tabs", "abc" },
-    order = {}, -- Tabs still exist just not shown
+    order = { "treeOffset", "buffers", "tabs", "abc" },
+    -- order = {}, -- Tabs still exist just not shown
     modules = {
       abc = function()
         return "hi"
@@ -72,5 +85,17 @@ M.colorify = {
 M.lsp = {
   signature = true,
 }
+
+-- M.term = {
+--   float = {
+--     border = "double",
+--   },
+-- }
+
+
+
+
+
+
 
 return M
