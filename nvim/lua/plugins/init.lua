@@ -7,14 +7,13 @@ return {
     end
   },
 
+  -- Not sure what this does?
+  -- {
+  --   "stevearc/conform.nvim",
+  --   event = 'BufWritePre', -- uncomment for format on save
+  --   opts = require "configs.conform",
+  -- },
 
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
-
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     dependecies = {
@@ -30,16 +29,19 @@ return {
         },
       },
     },
+
     config = function()
       require("lspconfig").clangd.setup {}
       require("lspconfig").basedpyright.setup {}
-      -- require("lspconfig").lua-language-server.setup {}
+      require("lspconfig").html.setup {}
+      require("lspconfig").lua_ls.setup{}
+
     end,
-  },
-  
+ },
+
   -- This was an example already in the file not sure what treesitter all does
   -- to be honest
-  { 
+  {
   	"nvim-treesitter/nvim-treesitter",
   	opts = {
   		ensure_installed = {
@@ -49,8 +51,6 @@ return {
   	},
   },
 
-  
- vim.keymap.set({ "n", "t" }, "t", function()
-     require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
- end)
+  -- Moved Terminal toggle to mapping.lua
+
 }

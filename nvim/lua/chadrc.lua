@@ -15,11 +15,11 @@ M.base46 = {
   changed_themes = {
     doomchad = {
       base_16 = { 
-        base00 = "#282c34"
+        -- base00 = "#282c34"
       },
       base_30 = {
         -- red = "#mycol",
-        -- one_bg = #FFFFFFFF,
+        -- one_bg = #FFFFFF,
         -- black = "#FFFFFF",
       },
     },

@@ -23,6 +23,11 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr><ESC>")
 map("n", "<leader>sc", ":set spell!<CR>")
 
 -- close tab instead of all of nvim (used to close out of all unsaved taps)
+-- idk why this does not work? leader is space and pressing space x closes the current buffer
+-- this mapping just deletes a character and moves the cursor
 map("n", "<C-q>", "<leader>x")
 
-
+-- Toggle Terminal
+map({ "n", "t" }, "<A-t>", function()
+    require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
+end)
