@@ -14,8 +14,11 @@ map("i", "kj", "<ESC>")
 -- ngl I don't think I ever use this
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
- -- ctrl s = save in any mode, result ends in normal mode
+-- ctrl s = save in any mode, result ends in normal mode
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr><ESC>")
+
+-- Pasting over text won't replace your buffer 
+map("x", "<leader>p", "\"_dP")
 
 -- Move lines up and down 
 -- TODO: does not work currently
