@@ -1,6 +1,6 @@
 
 #window
-window.opacity = 0.85
+window.opacity = 0.87 #0.85 
 window.decorations = "Full" # "Full" or "None" for the window border
 font.normal.family="InconsolataGoNerdFont"
 font.size =12
