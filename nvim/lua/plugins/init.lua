@@ -31,10 +31,18 @@ return {
     },
 
     config = function()
-      require("lspconfig").clangd.setup {}
-      require("lspconfig").basedpyright.setup {}
-      require("lspconfig").html.setup {}
-      require("lspconfig").lua_ls.setup{}
+        require("lspconfig").clangd.setup {}
+        require("lspconfig").basedpyright.setup {}
+        require("lspconfig").html.setup {}
+        require("lspconfig").lua_ls.setup {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { 'vim' },
+                    },
+                },
+            },
+        }
 
     end,
  },

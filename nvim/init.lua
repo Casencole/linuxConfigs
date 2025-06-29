@@ -37,20 +37,4 @@ vim.schedule(function()
 end)
 
 -- Vim Settings
-vim.opt.relativenumber = true
-vim.opt.spelllang = "en"
-
--- So if I have a lsp for a given language this line highlight errors red
-vim.cmd.highlight({ "Error", "guibg=red" })
-vim.cmd.highlight({ "link", "Warning", "Error" })
-
--- Spell Check highlight
--- Moved spell check to mappings as a toggle instead of default
--- vim.api.nvim_command("hi clear SpellBad")
--- vim.api.nvim_command("hi SpellBad cterm=underline")
--- vim.api.nvim_command("hi SpellBad gui=undercurl"
-
--- -- lsp enable
--- vim.lsp.enable('clangd')
--- vim.lsp.enable('basedpyright')
--- vim.lsp.enable('lua-language-server')
+-- Moved to lua/options.lua
