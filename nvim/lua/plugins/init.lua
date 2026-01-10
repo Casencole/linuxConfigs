@@ -34,6 +34,7 @@ return {
         require("lspconfig").clangd.setup {}
         require("lspconfig").basedpyright.setup {}
         require("lspconfig").html.setup {}
+        require("lspconfig").superhtml.setup {}
         require("lspconfig").lua_ls.setup {
             settings = {
                 Lua = {
