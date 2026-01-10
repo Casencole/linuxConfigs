@@ -220,11 +220,13 @@ bindsym $mod+space exec --no-startup-id "nemo"
 
  # --- Brightnessctl controls --- #
 # increase brightness by 5% it will max out at a 100% 
-bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl set +5%"  
+bindsym $mod+F5 exec --no-startup-id "brightnessctl set +5%"  
+# bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl set +5%"  
 bindsym $smod+XF86MonBrightnessUp exec --no-startup-id "brightnessctl set +1%"  
 
 # decrease brightness by 5%, Warning it will go all the way to 0
-bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl set 5%-"
+bindsym $mod+F4 exec --no-startup-id "brightnessctl set 5%-"
+# bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl set 5%-"
 bindsym $smod+XF86MonBrightnessDown exec --no-startup-id "brightnessctl set 1%-"
 
 

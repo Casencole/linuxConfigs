@@ -1,0 +1,11 @@
+# GIMP gimp-crop-tool options
+
+(aspect-denominator 671)
+(aspect-numerator 377)
+(foreground
+    (color "HSVA float" 16 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\200\77" 0))
+(background
+    (color "HSVA float" 16 "\255\6\23\77\26\1\37\77\353\344\13\77\0\0\200\77" 0))
+(pattern "Pine")
+
+# end of gimp-crop-tool options
